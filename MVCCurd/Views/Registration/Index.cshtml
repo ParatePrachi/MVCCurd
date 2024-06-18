@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Pages/Registration.js"></script>
+<h2>Index</h2>
+
+<div>
+    <label id="hdnid"></label>
+    <div class="form-group">
+        <input type="text" id="txtName" placeholder="Your Name" class="form-control">
+    </div>
+    <br />
+    <div class="form-group">
+        <input type="text" id="txtAdd" placeholder="Your Address" class="form-control">
+    </div>
+    <br />
+    <div class="form-group">
+        <input type="number" id="txtMobile" placeholder="Your Mobile Number" class="form-control">
+    </div>
+    <br />
+    <div class="form-group">
+        <input type="text" id="txtusername" placeholder="Your user name" class="form-control">
+
+    </div>
+    <br />
+    <div class="form-group">
+        <input type="text" id="txtpass" placeholder="Your PassWord" class="form-control">
+
+    </div>
+    <br />
+
+    <input type="button" id="btnsend" value="Submit" onclick="savereg()" class="btn-dark" />
+</div>
+<br />
+<table id="tblreg" border="1" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Mobile No</th>
+            <th>UserName</th>
+            <th>PassWord</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<div>
+    <label id="lblid" class="form-control"></label>
+    <label id="lblname" class="form-control"></label>
+    <label id="lbladd" class="form-control"></label>
+    <label id="lblmob" class="form-control"></label>
+    <label id="lbluname" class="form-control"></label>
+    <label id="lblpass" class="form-control"></label>
+</div>

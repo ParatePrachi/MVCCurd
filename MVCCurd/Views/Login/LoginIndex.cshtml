@@ -1,0 +1,27 @@
+﻿@model MVCCurd.Models.LodinModel
+
+@{
+    ViewBag.Title = "LoginIndex";
+}
+
+<h2>LoginIndex</h2>
+
+@using (Html.BeginForm("LoginIn", "Login", FormMethod.Post))
+{
+    <h4>@Html.LabelFor(a => a.USerId)</h4>
+    <div>
+        @Html.TextBoxFor(a => a.USerId, new { @maxlength = "10", @size = "10", @class = "Login_ _input" })
+        @Html.ValidationMessageFor(a => a.USerId)
+    </div>
+    <br />
+    <h4>
+        @Html.LabelFor(a => a.PassWord)
+    </h4>
+    <div>
+        @Html.PasswordFor(a => a.PassWord, new { @class = "Login_ _input" })
+    </div>
+    <br />
+    <input type="submit" value="Login" class="btn btn-info" />
+
+}
+

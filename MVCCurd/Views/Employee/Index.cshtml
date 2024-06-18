@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Pages/Employee.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js" defer="defer"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/dataTables.bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables-buttons/2.3.6/js/dataTables.buttons.min.js" defer="defer"></script>
+
+
+<div>
+    <label id="hdnid"></label>
+    <div class="form-group">
+        <input type="text" id="txtName" placeholder="Your Employee Name" class="form-control">
+    </div>
+    <br />
+    <div class="form-group">
+        <input type="text" id="txtAdd" placeholder="Your Employee Address" class="form-control">
+    </div>
+    <br />
+    <div class="form-group">
+        <input type="number" id="txtMobile" placeholder="Your Mobile Number" class="form-control">
+    </div>
+    <br />
+    <div class="form-group">
+        <input type="number" id="txtpin" placeholder="Your Pincode" class="form-control">
+
+    </div>
+    <br />
+    <div class="form-group">
+        <input type="file" id="File1" class="form-control">
+
+    </div>
+    <br/>
+
+    <input type="button" id="btnsend" value="Submit" onclick="saveEmployee()" class="btn-success" />
+</div>
+<br />
+
+<table id="tblemp" border="1" class="table table-bordered">
+    <thead>
+        @*<tr>
+                <th>Id</th>
+                <th>EmpName</th>
+                <th>EmpAddress</th>
+                <th>Mobile No</th>
+                <th>Pincode</th>
+                <th>Photo</th>
+            </tr>*@
+    </thead>
+    <tbody></tbody>
+</table>
+
+<div id="WriteToUsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                <h1>Details &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h1>
+            </div>
+
+            <div class="modal-body">
+                <div class="container" id="idmod">
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
